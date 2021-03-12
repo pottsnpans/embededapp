@@ -19,6 +19,22 @@
   <p>this is is a paragraph</p>
   <img src="genconnect.png" alt="Gen Software" width="500" height="400">
 
-  <script>(()=>{const e=document.createElement("script");e.src="https://cdn.jsdelivr.net/npm/iframe-resizer@4.2.11/js/iframeResizer.min.js",document.body.appendChild(e),e.addEventListener("load",function(){const e=document.createElement("iframe");e.id="crowdsmart-embed-app",e.src="https://embed.crowdsmart.ai/evaluation/csinnovator/3d2d7fd2-7130-11eb-ba21-0a72d1dc96e5/38094764-7132-11eb-86db-0a72d1dc96e5",document.body.appendChild(e),e.addEventListener("load",function(){iFrameResize({},"#crowdsmart-embed-app")})})})();</script>
+<script>
+  (() => {
+    const resizer = document.createElement('script')
+    resizer.src = 'https://cdn.jsdelivr.net/npm/iframe-resizer@4.2.11/js/iframeResizer.min.js'
+    document.body.appendChild(resizer)
+    resizer.addEventListener('load', function () {
+      const iframe = document.createElement('iframe')
+      iframe.id = 'crowdsmart-embed-app'
+      iframe.src = 'https://www.crowdsmart.ai/embed/evaluation/demo/1f751cf6-fd28-11ea-83df-06154739ad7c/d970a928-835a-11eb-baa0-0a72d1dc96e5'
+      document.body.appendChild(iframe)
+      iframe.addEventListener('load', function () {
+        iFrameResize({}, '#crowdsmart-embed-app')
+      })
+    })
+  })()
+</script>
+
   </body>
 </html>
