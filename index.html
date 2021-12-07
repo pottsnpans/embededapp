@@ -17,24 +17,16 @@
 <body>
   <h1>Zoom Integration Example</h1>
  <img src="zoom.png" alt="Climate Change" width="1440" height="875">
-
-<script>
-  (() => {
-    const resizer = document.createElement('script')
-    resizer.src = 'https://cdn.jsdelivr.net/npm/iframe-resizer@4.2.11/js/iframeResizer.min.js'
-    document.body.appendChild(resizer)
-    resizer.addEventListener('load', function () {
-      const iframe = document.createElement('iframe')
-      iframe.id = 'crowdsmart-embed-app'
-      iframe.src = 'https://www.crowdsmart.ai/embed/evaluation/unearth/9cc17abe-be67-11eb-8db6-0a72d1dc96e5/26650e30-be6c-11eb-ab9e-0a72d1dc96e5'
-      document.body.appendChild(iframe)
-      iframe.addEventListener('load', function () {
-        iFrameResize({}, '#crowdsmart-embed-app')
-      })
-    })
-  })()
-  <link href="https://www.crowdsmart.ai/css/embedStyle.css" rel="stylesheet" type="text/css">
-  <script
+  <script>
+      window.CROWDSMART_EMBED_CONFIG = {
+        crowdSmartConfig: {
+          font: {
+            href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap',
+            family: '"Montserrat", sans-serif'
+          }
+        }
+      }
+  </script>
       src="https://www.crowdsmart.ai/js/embedScript.js"
       id="crowdsmart-embed-script"
       data-embed-url="https://www.crowdsmart.ai/embed/evaluation/demo/1f751cf6-fd28-11ea-83df-06154739ad7c/852b2e14-fd28-11ea-820a-06154739ad7c">
